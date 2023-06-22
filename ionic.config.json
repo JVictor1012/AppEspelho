@@ -1,0 +1,7 @@
+{
+  "name": "appEspelho",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
