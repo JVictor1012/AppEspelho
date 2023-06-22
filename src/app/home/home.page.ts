@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CameraPreview, CameraPreviewOptions } from '@capacitor-community/camera-preview';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,17 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  cameraPreviewOptions: CameraPreviewOptions = {
+    position: 'front',
+    height: 1920,
+    width: 1080,
+    enableZoom: true
+  };
+
+  
+  constructor() {
+    CameraPreview.start(this.cameraPreviewOptions);
+ }
+
 
 }
